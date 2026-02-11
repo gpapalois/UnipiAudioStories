@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Unipi Audio Stories</string>
+    <string name="welcome_msg">Ready for a new adventure?</string>
+
+    <string name="btn_stats_icon">📊 STATS</string>
+    <string name="btn_logout_icon">🚪 EXIT</string>
+    <string name="select_language">Select Language</string>
+
+    <string name="most_loved">Favorite Story:</string>
+    <string name="details">Details:</string>
+    <string name="no_data_available_yet">No data available yet.</string>
+    <string name="back">BACK</string>
+    <string name="times_label">times</string>
 </resources>

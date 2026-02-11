@@ -1,5 +1,6 @@
 package gr.unipi.unipiaudiostories;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
@@ -131,7 +132,7 @@ public class StoryActivity extends AppCompatActivity {
                     public void onDone(String utteranceId) {
                         runOnUiThread(() -> {
 
-                            // ❌ Αν ο χρήστης πάτησε pause, ΜΗΝ προχωράς index
+                            // Αν ο χρήστης πάτησε pause, ΜΗΝ προχωράς index
                             if (userPaused) return;
 
                             currentIndex++;
@@ -179,6 +180,7 @@ public class StoryActivity extends AppCompatActivity {
                         tvTitle.setText(story.title);
                         tvAuthor.setText(story.author + (story.year > 0 ? " • " + story.year : ""));
                         tvText.setText(story.text);
+                        recordListen(story.title);
 
                         Glide.with(StoryActivity.this)
                                 .load(story.imageUrl)
@@ -203,7 +205,17 @@ public class StoryActivity extends AppCompatActivity {
                     }
                 });
     }
+    private void recordListen(String storyTitle) {
+        // Παίρνουμε το userId που στείλαμε από την προηγούμενη οθόνη
+        String userId = getIntent().getStringExtra("userId");
+        if (userId == null) userId = "guest"; // fallback
 
+        // Το όνομα του αρχείου είναι πλέον μοναδικό για τον χρήστη
+        SharedPreferences prefs = getSharedPreferences("Stats_" + userId, MODE_PRIVATE);
+
+        int currentCount = prefs.getInt(storyTitle, 0);
+        prefs.edit().putInt(storyTitle, currentCount + 1).apply();
+    }
     // --- Chunking ---
     private void buildChunks(String text) {
         chunks.clear();

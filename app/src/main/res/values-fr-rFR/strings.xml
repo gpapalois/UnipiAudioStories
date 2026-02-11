@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Histoires Unipi</string>
+    <string name="welcome_msg">Prêt pour l\'aventure?</string>
+
+    <string name="btn_stats_icon">📊 STATS</string>
+    <string name="btn_logout_icon">🚪 SORTIE</string>
+    <string name="select_language">Choisir la langue</string>
+
+    <string name="most_loved">Histoire Préférée:</string>
+    <string name="details">Détails:</string>
+    <string name="no_data_available_yet">Aucune donnée disponible pour le moment.</string>
+    <string name="back">RETOUR</string>
+    <string name="times_label">fois</string>
+</resources>

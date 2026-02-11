@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Ιστορίες Unipi</string>
+<string name="welcome_msg">Έτοιμοι για μια περιπέτεια;</string>
+
+<string name="btn_stats_icon">📊 ΣΤΑΤ</string>
+<string name="btn_logout_icon">🚪 ΕΞΟΔΟΣ</string>
+<string name="select_language">Επιλογή Γλώσσας</string>
+
+<string name="most_loved">Αγαπημένη Ιστορία:</string>
+<string name="details">Λεπτομέρειες:</string>
+<string name="no_data_available_yet">Δεν υπάρχουν διαθέσιμα δεδομένα.</string>
+<string name="back">ΕΠΙΣΤΡΟΦΗ</string>
+<string name="times_label">φορές</string>
+</resources>
